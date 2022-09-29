@@ -1,39 +1,69 @@
-.App {
+.container {
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.photo-picker input[type=file] {
+  display: none;
+}
+.photo-picker {
+  border: 2px solid gray;
+  margin: 4px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+.icon-button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  background-color: transparent;
+}
+.icon-button[disabled] {
+  opacity: 50%;
+}
+.button-left {
+  background-image: url(left.svg);
+}
+.button-right {
+  background-image: url(right.svg);
+}
+.photo-viewer {
+  display: flex;
+}
+.photo-viewer img {
+  display: block;
+  box-shadow: 0 0 8px black;
+  margin: 7px;
+}
+.photo-viewer-side {
+  width: 114px;
+}
+.photo-viewer-center {
+  flex: 1;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.photo-viewer-center img {
+  margin: 0 auto 30px auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.photo-viewer-placeholder {
+  margin: 0 auto 30px auto;
+  border: 4px dotted gray;
+  height: 200px;
+  width: 200px;
 }
-
-.App-header {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.photo-viewer-side img {
+  width: 100px;
+  height: 100px;
 }
-
-.App-link {
-  color: rgb(112, 76, 182);
+.photo-viewer-delete-button {
+  border: 3px solid red;
+  border-radius: 8px;
+  padding: 6px;
+  background: transparent;
+  color: red;
 }
-
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+.photo-viewer-delete-button:hover {
+  color: #aa0000;
+  border-color: #aa0000;
 }
