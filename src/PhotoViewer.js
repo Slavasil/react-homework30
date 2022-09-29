@@ -26,16 +26,16 @@ export default function PhotoViewer() {
   let olderPhotos = [];
   for (let i = 0; i < photos.length; i++) {
     let photo = photos[i];
-    let element = <img src={photo.url} key={photo.id} onClick={()=>handlePhotoClick(i)} width="200" height="200"/>;
+    let element = <img src={photo.url} key={photo.id} onClick={()=>handlePhotoClick(i)} width="200" height="200" alt=""/>;
     if (i < focusedPhotoIndex) {
       newerPhotos.splice(0, 0, element);
-    } else if (i == focusedPhotoIndex) {
+    } else if (i === focusedPhotoIndex) {
       focusedPhoto = element;
     } else {
       olderPhotos.push(element);
     }
   }
-  let photosNotEmpty = photos.length != 0;
+  let photosNotEmpty = photos.length !== 0;
   return (
     <div className="photo-viewer">
       <div className="photo-viewer-side">
